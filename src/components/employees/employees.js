@@ -1,10 +1,9 @@
 import React from "react";
-//import "./employees.css";
-//import Moment from "moment";
+
 
 const Employees = (props) => {
 
-  //let fixedDate = Moment(props.dob).format("LL");
+  
 
   return (
 

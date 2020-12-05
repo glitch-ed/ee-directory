@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Employees from "../employees/employees";
 import Search from "../search/search";
-//import "./directory.css";
 
 class Directory extends Component {
 
@@ -34,7 +33,7 @@ class Directory extends Component {
     this.setState({ empSort })
   }
 
-  // grab search term, activate sorted  
+  
   startSort = event => {
     this.setState({ search: event.target.value }, () => {
       this.sortEmp();
@@ -65,16 +64,15 @@ class Directory extends Component {
           <table className="table">
             <thead className="thead">
               <tr>
-                <th>Headshot  </th>
+                <th>Picture</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Birthdate  </th>
               </tr>
             </thead>
             <tbody>
 
-              {/* if it's not sorted, map accordingly */}
+              
               {!this.state.sorted ? this.state.employees.map(employee => (
 
 
@@ -85,7 +83,6 @@ class Directory extends Component {
                   phone={employee.phone}
                   email={employee.email}
                   icon={employee.picture.medium}
-                  dob={employee.dob.date}
 
                 />
 
@@ -100,10 +97,9 @@ class Directory extends Component {
                     phone={employee.phone}
                     email={employee.email}
                     icon={employee.picture.medium}
-                    dob={employee.dob.date}
                   />
 
-                ))};
+                ))}
           </tbody>
           </table>
 
